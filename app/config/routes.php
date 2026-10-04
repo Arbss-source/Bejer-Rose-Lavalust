@@ -53,7 +53,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
     get_config($config);
 })();
 
-$router->get('/', 'Welcome::index');
+$router->get('/', 'AuthController::login');
 
 $router->get('/student', 'StudentController::index');
 $router->get('/student/profile', 'StudentController::profile')->middleware('student');
